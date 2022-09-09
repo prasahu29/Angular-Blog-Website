@@ -1,0 +1,53 @@
+<div class="text-align:center;">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-200">
+        <div class="col-10 col-md-12 col-lg-7 col-xl-15">
+
+          <div class="card-body ">
+            <br>
+            <table class="table">
+              <thead>
+                <tr>
+
+                  <th scope="col">Tite</th>
+                  <th scope="col">Body</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let blog of newsdata">
+
+
+
+                  <td>{{blog.title}}</td>
+
+                  <td>{{blog.body}}</td>
+                  <td>{{blog.description}}</td>
+
+
+                  <a class="btn btn btn-dark btn-sm" [routerLink]="['/admin/viewblog',blog._id]">VIEW</a>&nbsp;
+
+
+                  <a class="btn btn btn-primary " [routerLink]="['/admin/editblog',blog._id ]">EDIT</a>&nbsp;
+                  <a class="btn btn btn-danger  " (click)="blogdelete(blog._id)">DELETE</a>
+                </tr>
+
+
+
+
+
+
+              </tbody>
+            </table>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
